@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Shell.NavBarIsVisible="False"
+             x:Class="Online_Grocery.Page1">
+    <Grid RowSpacing="0" Padding="0" Margin="0" x:Name="grid" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="52"></RowDefinition>
+        </Grid.RowDefinitions>
+        <ScrollView x:Name="qwer"></ScrollView>
+        <Grid Grid.Row="1" Grid.Column="0" ColumnSpacing="1" Padding="1" Margin="0" BackgroundColor="LimeGreen" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Frame x:Name="one"  Grid.Column="0" Grid.Row="0" Padding="0" Margin="0"  HorizontalOptions="Fill" VerticalOptions="Fill" >
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="home"></TapGestureRecognizer>
+                </Frame.GestureRecognizers>  
+                <StackLayout Spacing="0" Padding="0" Margin="0">
+                    <Image Source="home.png" Aspect="AspectFit" HeightRequest="30" WidthRequest="30"></Image>
+                    <Label x:Name="one1" Text="Home" FontSize="Medium" HorizontalOptions="Center" ></Label>
+                </StackLayout>
+            </Frame>
+            <Frame BackgroundColor="LimeGreen" x:Name="two" Grid.Column="1" Grid.Row="0" Padding="0" Margin="0"  HorizontalOptions="Fill" VerticalOptions="Fill" >
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="cart"></TapGestureRecognizer>
+                </Frame.GestureRecognizers>
+                <StackLayout Spacing="0" Padding="0" Margin="0">
+                    <Image Source="cart.png" Aspect="AspectFit" HeightRequest="30" WidthRequest="30"></Image>
+                    <Label x:Name="two2" TextColor="White" Text="Cart" FontSize="Medium" HorizontalOptions="Center" ></Label>
+                </StackLayout>
+            </Frame>
+            <Frame x:Name="three" BackgroundColor="LimeGreen" Grid.Column="2" Grid.Row="0" Padding="0" Margin="0"  HorizontalOptions="Fill" VerticalOptions="Fill" >
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="notification"></TapGestureRecognizer>
+                </Frame.GestureRecognizers>
+                <StackLayout Spacing="0" Padding="0" Margin="0">
+                <Image Source="notification.png" Aspect="AspectFit" HeightRequest="30" WidthRequest="30"></Image>
+                    <Label x:Name="three3" TextColor="White" Text="Notifications" FontSize="Medium" HorizontalOptions="Center" ></Label>
+                </StackLayout>
+            </Frame>
+        </Grid>
+    </Grid>
+</ContentPage>

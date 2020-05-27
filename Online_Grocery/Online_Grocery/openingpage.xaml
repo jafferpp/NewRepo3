@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Shell.NavBarIsVisible="False"
+             x:Class="Online_Grocery.openingpage">
+    <ContentPage.Content>
+        <ScrollView Margin="0" Padding="0">
+        <StackLayout Spacing="2">
+            <Frame HorizontalOptions="Fill" CornerRadius="5" Padding="0" Margin="0" BorderColor="LightBlue">
+                <Image x:Name="img" Source="defaultimage.png" HorizontalOptions="Fill" Aspect="AspectFill"></Image>
+            </Frame>
+            <Grid BackgroundColor="LightBlue">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="120"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <StackLayout Grid.Column="0" Grid.Row="0" Spacing="2" Padding="2" Margin="10" HorizontalOptions="Fill">
+                        <Label x:Name="label0" FontSize="12"></Label>
+                        <Label x:Name="label1" Text="AED " FontSize="15" FontAttributes="Bold" ></Label>
+                    <Label x:Name="label2" FontSize="12"></Label>
+                </StackLayout>
+                    <StackLayout Margin="0" Grid.Column="1" Grid.Row="0" Padding="0"  Spacing="5" HorizontalOptions="Fill">
+                        <Image WidthRequest="60" HeightRequest="60" Aspect="AspectFit" x:Name="gify" Source="gify.gif" IsAnimationPlaying="True" IsVisible="False"></Image>                   
+                        <Button x:Name="cartbutton" Text="Add to cart" BackgroundColor="DarkSlateBlue" TextColor="White" CornerRadius="10" HeightRequest="40" HorizontalOptions="Fill" VerticalOptions="Start" Clicked="addtocart"></Button>
+                    <StackLayout x:Name="cartstack" Orientation="Horizontal"  Spacing="5" HorizontalOptions="Fill" VerticalOptions="Fill">
+                        <Button Clicked="mclic" Text="-" WidthRequest="50" BackgroundColor="DarkOrange" TextColor="White" CornerRadius="10" HeightRequest="35" FontSize="9" HorizontalOptions="Start" Padding="0"></Button>
+                        <Label x:Name="qtylabel" Text="1" FontSize="12" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+                        <Button Clicked="pclic" Text="+" WidthRequest="50" BackgroundColor="LimeGreen" TextColor="White" CornerRadius="10" Padding="0" FontSize="9" HeightRequest="35" HorizontalOptions="End"></Button>
+                    </StackLayout>
+
+                </StackLayout>
+            </Grid>
+                <StackLayout Margin="0" Orientation="Horizontal" Spacing="10"  Padding="10" HorizontalOptions="Fill" BackgroundColor="LightBlue">
+                <Button x:Name="one1" Text="Product Details" HorizontalOptions="Start" FontSize="12" BackgroundColor="White" Clicked="prductdetails"></Button>
+                    <Button x:Name="two2" Text="Specifications" HorizontalOptions="End" FontSize="12" BackgroundColor="LightBlue" Clicked="specifications"></Button>
+            </StackLayout>
+                <ScrollView Margin="0" Orientation="Horizontal" x:Name="scr" BackgroundColor="LightBlue" HorizontalScrollBarVisibility="Never" >
+                <Grid RowSpacing="10" BackgroundColor="LightBlue">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="370"></ColumnDefinition>
+                        <ColumnDefinition Width="360"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                        <Label x:Name="l11" Margin="0" TextColor="Black" Grid.Column="0" Grid.Row="0" Text="Details" VerticalOptions="Center"></Label>
+                        <Label x:Name="l22"   TextColor="Black" Grid.Column="1" Grid.Row="0" Text="Specification" VerticalOptions="Center"></Label>
+                        <Label Margin="10"   TextColor="Black" Grid.Column="0" Grid.Row="1" x:Name="details" HorizontalOptions="Start" ></Label>
+                        <Label IsVisible="False"   TextColor="Black" Grid.Column="1" Grid.Row="1" x:Name="specification" HorizontalOptions="Start" ></Label>
+                </Grid>
+            </ScrollView>
+                <Label Text="Comments and reviews" HorizontalOptions="Center"></Label>
+            <StackLayout  x:Name="commentgrid">
+                
+            </StackLayout>
+                <Frame BorderColor="LightBlue" CornerRadius="5" Padding="0" Margin="0">
+                    <Editor Margin="0" Placeholder="enter your comment" x:Name="ed"></Editor>
+                </Frame>
+                <Button Text="Add your comment" Clicked="com" BackgroundColor="DarkSlateBlue" TextColor="White" ></Button>
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

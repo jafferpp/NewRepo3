@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Shell.NavBarIsVisible="False"
+             x:Class="Online_Grocery.login">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center">
+            <StackLayout  Spacing="10"  Padding="5" x:Name="firststack" IsVisible="True">
+                <Frame  CornerRadius="6" BorderColor="LightBlue" Margin="0" Padding="0" >
+                    <Entry x:Name="entry1" Margin="0" HeightRequest="60" Placeholder="mobile no" PlaceholderColor="LightGray"></Entry>
+                </Frame>
+                <Frame  CornerRadius="6" BorderColor="LightBlue" Margin="0" Padding="0" >
+                    <Entry x:Name="entry2" HeightRequest="60" PlaceholderColor="LightGray" Placeholder="Password" IsPassword="True"></Entry>
+                </Frame>
+
+                <Button Text="Log in" Clicked="logincutomer" HeightRequest="50" CornerRadius="10"  BackgroundColor="#3F51B5" TextColor="White"></Button>
+
+                <Label Text="New User? Sign up"  TextColor="#3F51B5" HorizontalOptions="Center" FontSize="Medium">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="signup"></TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+            <StackLayout Spacing="5" IsVisible="False" x:Name="secondstack" Margin="0" Padding="0">
+                <Label Text="Customer Register" HorizontalOptions="Center" FontSize="Medium"></Label>
+                <Frame CornerRadius="5" BorderColor="LightBlue" Padding="5" >
+                    <ScrollView>
+                        <StackLayout>
+                            <ImageButton x:Name="imgbutton" Aspect="AspectFill"  HeightRequest="90" WidthRequest="90" Source="defaultimage.png" HorizontalOptions="Center" Clicked="imgclick" CornerRadius="50"></ImageButton>
+                            <Label Text="Upload image" HorizontalOptions="Center"></Label>
+                            <Label Text="Name"></Label>
+                            <Frame  CornerRadius="6" BorderColor="LightBlue" Margin="0" Padding="0" >
+                                <Entry x:Name="entry11" Margin="0" HeightRequest="60" Placeholder="Enter your name" PlaceholderColor="LightGray"></Entry>
+                            </Frame>
+                            <Label Text="Mobile Number"></Label>
+                            <Frame  CornerRadius="6" BorderColor="LightBlue" Margin="0" Padding="0" >
+                                <Entry Keyboard="Numeric" x:Name="entry22" Margin="0" HeightRequest="60" Placeholder="Enter mobile no" PlaceholderColor="LightGray"></Entry>
+                            </Frame>
+                            <Label Text="Email"></Label>
+                            <Frame  CornerRadius="6" BorderColor="LightBlue" Margin="0" Padding="0" >
+                                <Entry x:Name="entry33"  Margin="0" HeightRequest="60" Placeholder="Enter email" PlaceholderColor="LightGray"></Entry>
+                            </Frame>
+                            <Label Text="Address"></Label>
+                            <Frame  CornerRadius="6" BorderColor="LightBlue" Margin="0" Padding="0" >
+                                <Editor HeightRequest="90" x:Name="entry44" Placeholder="Address" PlaceholderColor="LightGray"></Editor>
+                            </Frame>
+                            <Label Text="Place"></Label>
+                            <Frame  CornerRadius="6" BorderColor="LightBlue" Margin="0" Padding="0" >
+                                <Entry x:Name="entry55" Margin="0" HeightRequest="60" Placeholder="Enter place" PlaceholderColor="LightGray"></Entry>
+                            </Frame>
+                            <Label Text="Create new password"></Label>
+                            <Frame  CornerRadius="6" BorderColor="LightBlue" Margin="0" Padding="0" >
+                                <Entry x:Name="entry66" HeightRequest="60" IsPassword="True" Placeholder="Enter password" PlaceholderColor="LightGray"></Entry>
+                            </Frame>
+                            <Frame  CornerRadius="6" BorderColor="LightBlue" Margin="0" Padding="0" >
+                                <Entry x:Name="entry77" HeightRequest="60" IsPassword="True" Placeholder="Conform password password" PlaceholderColor="LightGray"></Entry>
+                            </Frame>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="10">
+                                <Button Text="Sign Up" Clicked="sign_up" BackgroundColor="#3F51B5" CornerRadius="10"></Button>
+                                <Button Text="Cancel" BackgroundColor="DarkOrange" Clicked="cancel" CornerRadius="10">
+                                </Button>
+                            </StackLayout>
+                        </StackLayout>
+                    </ScrollView>
+                </Frame>
+            </StackLayout>
+            <StackLayout x:Name="imagestack" IsVisible="False">
+                <Image Source="gify.gif" IsAnimationPlaying="True"  VerticalOptions="Center" HorizontalOptions="Center"></Image>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
